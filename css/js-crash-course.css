@@ -1,0 +1,17 @@
+.highlight {
+  color: orange;
+  font-weight: bold;
+}
+
+#js-speed-charts {
+  position: relative;
+  height: 380px;
+}
+
+#js-speed-charts img {
+  position: absolute;
+  top: 0px;
+  left: 177px;
+  width: 605px;
+  height: 340px;
+}
