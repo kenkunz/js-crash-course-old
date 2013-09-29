@@ -1,6 +1,29 @@
+#slide-title h2 {
+  color: orange;
+}
+
+#slide-career h1 {
+  color: #224466;
+}
+
+#slide-career h2 {
+  color: #336699;
+}
+
 .highlight {
   color: orange;
   font-weight: bold;
+}
+
+p.attribution {
+  font-size: 70%;
+}
+
+div.attribution {
+  position: absolute;
+  bottom: -7em;
+  left: 0;
+  font-size: 70%;
 }
 
 #js-speed-charts {
