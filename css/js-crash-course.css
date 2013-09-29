@@ -15,3 +15,25 @@
   width: 605px;
   height: 340px;
 }
+
+.inline-repl {
+  height: 250px;
+}
+
+.inline-repl pre {
+  height: 100%;
+  float: left;
+}
+
+.inline-repl pre:first-child {
+  width: 62%;
+}
+.inline-repl pre:last-child {
+  width: 35%;
+  float: right;
+}
+
+.inline-repl pre code {
+  height: 100%;
+  padding: 10px;
+}
