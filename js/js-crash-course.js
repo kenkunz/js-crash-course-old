@@ -15,7 +15,7 @@ $(function() {
       console.log = function() {
         var argStr = Array.prototype.join.call(arguments, " ");
         $console.text($console.text() + argStr + "\n");
-        originalLog.apply(this, arguments);
+        _consoleLog.apply(this, arguments);
       }
 
       $console.text("");
