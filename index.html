@@ -155,7 +155,7 @@
               <li class="fragment">Object-Oriented</li>
               <li class="fragment">Prototype-based</li>
               <li class="fragment">First-Class Functions</li>
-              <li class="fragment">Lexical Closures</li>
+              <li class="fragment">Single-Threaded</li>
             </ul>
 
   					<aside class="notes">
@@ -196,42 +196,139 @@ console.log('Hello, world!');
             </div>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+        </section>
+
+        <!-- Types -->
+        <section>
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h1>Types</h1>
             <ul>
               <li>Numbers</li>
               <li>Strings</li>
               <li>Booleans</li>
-              <li>Functions</li>
               <li>Objects</li>
+              <li>Functions</li>
               <li>Special</li>
             </ul>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Types: Numbers</h2>
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Numbers</h2>
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
-var a = 0,
-    b = 1;
-    c = 2;
+// numbers: 1, 1.2, 1.2e4, 1.2e-4
+// 0377, 0xFF
+// 64 bit floating point: max integer is 2**53 or 9007199254740992
 
-console.log( a/b );
-console.log( b/a );
-console.log( a/a );
-console.log( b/c );
-
+console.log(  0 / 1 );
+console.log(  1 / 0 );
+console.log( -1 / 0 );
+console.log(  1 / 2 );
+console.log(  0 / 0 );
               </code></pre>
     					<pre><code></code></pre>
             </div>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Conditionals</h2>
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Strings</h2>
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
+var s = "foo";
+
+console.log( s.length );
+console.log( s.toUpperCase() );
+console.log( s[0] );
+console.log( s.charAt(1), s.charCodeAt(1) );
+console.log( s + "bar" );
+console.log();
+
+var s2 = s.replace("oo", "owl");
+console.log( s, s2 );
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Booleans</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var t = true,
+    f = false;
+
+true && false;
+true || false;
+console.log( !true );
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Objects</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+{
+  foo: "abc",
+  bar: 1
+}
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Arrays</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var a = [1, 2, 3, "foo"];
+var b = Array(100);
+
+a.push(true);
+a.pop();
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Functions</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+        </section>
+
+        <!-- Types -->
+        <section>
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>Control Structures</h1>
+            <ul>
+              <li>conditionals</li>
+              <li>switch / case</li>
+              <li>while / do&hellip;while</li>
+              <li>for / for in</li>
+              <li>try / catch / finally</li>
+            </ul>
+          </section>
+
+
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>Conditionals</h2>
+ 
+            <div class="inline-repl">
+              <pre><code data-trim contenteditable>
 var a = 0.1,
     b = 0.2,
     c = 0.3;
@@ -244,33 +341,34 @@ if (a + b === c) {
   console.log('wtf?');
 }
               </code></pre>
-    					<pre><code></code></pre>
+     					<pre><code></code></pre>
             </div>
-          </section>
+          </section> 
+
 
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Switch statement</h2>
+            <h2>Switch / Case</h2>
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
-switch (expression) {
-  case label1:
-    statements1
-    [break;]
-  case label2:
-    statements2
-    [break;]
-  ...
-  case labelN:
-    statementsN
-    [break;]
+var fav = prompt("What's your favorite color?");
+
+switch (fav.toLowerCase()) {
+  case "blue":
+    console.log("mine too!");
+    break;
+  case "green":
+    console.log("it's not easy being green...");
+    break;
   default:
-    statements_def
-    [break;]
+    console.log("how nice");
 }
               </code></pre>
     					<pre><code></code></pre>
             </div>
+
+            <p class="fragment">(often an anti-pattern)</p>
+
           </section>
 
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
@@ -297,6 +395,14 @@ switch (expression) {
         </section>
 
 				<section>
+					<h1>Array iterators (ECMAScript 5)</h1>
+
+					<aside class="notes">
+					</aside>
+
+				</section>
+
+				<section>
 					<h1>Prototypical Inheritance</h1>
 
 					<aside class="notes">
@@ -320,7 +426,21 @@ switch (expression) {
 
 				</section>
 
+				<section>
+					<h1>JS Unit Testing</h1>
 
+					<aside class="notes">
+					</aside>
+
+				</section>
+
+				<section>
+					<h1>JS Concurrency Model</h1>
+
+					<aside class="notes">
+					</aside>
+
+				</section>
 
 			</div>
 
