@@ -1,7 +1,9 @@
 $(function() {
 
   var _consoleLog = console.log;
-  console.sep = function() { console.log("--------------------"); }
+  console.sep = function(n) {
+    do { console.log(); n-=1; } while(n);
+  }
 
   $(".inline-repl").on("keypress", function(e) {
     if (e.which === 18) {
@@ -14,7 +16,8 @@ $(function() {
       $code.html( hljs.highlight('javascript', code).value );
 
       console.log = function() {
-        var argStr = Array.prototype.join.call(arguments, " ");
+        var args = Array.prototype.slice.call(arguments);
+        var argStr = args.map(function(arg){ return arg; String(arg); }).join(" ");
         $console.text($console.text() + argStr + "\n");
         _consoleLog.apply(this, arguments);
       }

@@ -218,16 +218,16 @@ console.log('Hello, world!');
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
 // these are all number literals
+console.sep(2);
 console.log( 1, 1.23, 1.2e4, 1.2e-4, 0377, 0xFF );
 
 // here are some other interesting numbers
+console.sep(3);
 console.log( 0/1 , 1/0, -1/0, 0/0 );
 
 // they're all numbers
-console.sep();
-console.log( typeof(1) );
-console.log( typeof(Infinity) );
-console.log( typeof(NaN) );
+console.sep(3);
+console.log(typeof 1, typeof Infinity, typeof NaN);
               </code></pre>
     					<pre><code></code></pre>
             </div>
@@ -240,16 +240,18 @@ console.log( typeof(NaN) );
     					<pre><code data-trim contenteditable>
 var s = "foo";
 
+console.sep(3);
 console.log( s.length );
 console.log( s.toUpperCase() );
-console.log( s[0] );
-console.log( s.charAt(1), s.charCodeAt(1) );
+console.log( s[1], s.charAt(1), s.charCodeAt(1) );
 console.log( s + "bar" );
 
-console.sep();
-
+console.sep(2);
 var s2 = s.replace("oo", "owl");
 console.log( s, s2 );
+
+console.sep(3);
+console.log( typeof s );
               </code></pre>
     					<pre><code></code></pre>
             </div>
@@ -261,14 +263,15 @@ console.log( s, s2 );
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
 console.log( true, false );
-console.sep();
 
+console.sep(2);
 console.log( true && false );
 console.log( true || false );
 console.log( !true );
-console.sep();
+console.log( 0 === 0, 0 !== 0 );
 
-console.log( 0 === 0 );
+console.sep(2);
+console.log( typeof true, typeof false );
 
 // note: all of these evaluate to false:
 false, 0, "", null, undefined;
@@ -288,11 +291,12 @@ var o = {
   baz: { a: 'bingo', b: 'flamingo' }
 }
 
+console.sep(7)
 console.log( o.foo );
 console.log( o['bar'] );
 console.log( o.baz.a );
-console.sep();
 
+console.sep(3);
 var key = 'bar';
 console.log( o[key] );
               </code></pre>
@@ -310,8 +314,17 @@ console.log( o[key] );
 var a = [1, 2, 3, "foo"];
 var b = Array(100);
 
-a.push(true);
-a.pop();
+console.sep(4)
+console.log( a.length, b.length );
+
+a[20] = "twenty";
+
+console.sep(4)
+console.log( a.length, a[20], a[19] );
+console.log( Object.keys(a) );
+
+console.sep(2);
+console.log( typeof a );
               </code></pre>
     					<pre><code></code></pre>
             </div>
