@@ -207,8 +207,9 @@ console.log('Hello, world!');
               <li>Strings</li>
               <li>Booleans</li>
               <li>Objects</li>
+              <li>Arrays</li>
               <li>Functions</li>
-              <li>Special</li>
+              <li>Other</li>
             </ul>
           </section>
 
@@ -335,6 +336,15 @@ console.log( typeof a );
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
+function randomInt(max) {
+  var random = Math.random() * max;
+  var randomInt = Math.round(random);
+  return randomInt;
+}
+
+console.sep(7);
+console.log( randomInt(100) );
+console.log( randomInt(1000) );
               </code></pre>
     					<pre><code></code></pre>
             </div>
