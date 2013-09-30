@@ -367,7 +367,7 @@ console.log( randomInt(1000) );
           </section>
 
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Variables / Scoping</h2>
+            <h2>Variables / Scoping (p1)</h2>
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
@@ -379,23 +379,66 @@ console.sep(5);
 console.log( foo, bar, baz );
 
 if (true) {
-  var foo;
-  console.log(foo);
-  foo = 1;
+  var foo = 1;
 }
 
-console.log(foo);
+console.sep(6);
+// console.log(foo);
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
 
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>Variables / Scoping (p2)</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var foo = 'foo';
+
+function bar() {
+  var foo = 'bar';
+  return foo;
+}
+
+console.sep(8);
+console.log( bar() );
+console.log( foo );
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>Variables / Scoping (p3)</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var foo, bar;
+
+function foobar() {
+  foo = 'foo';
+  var bar = 'bar';
+}
+
+foobar();
+
+console.sep(10);
+console.log( foo, bar );
               </code></pre>
     					<pre><code></code></pre>
             </div>
           </section>
 
           <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Conditionals</h2>
+            <h1>Always declare your variables with var!!!</h1>
  
-            <div class="inline-repl">
-              <pre><code data-trim contenteditable>
+          </section> 
+
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>Conditionals</h2>
+              <div class="inline-repl">
+                <pre><code data-trim contenteditable>
 var a = 0.1,
     b = 0.2,
     c = 0.3;
@@ -408,10 +451,9 @@ if (a + b === c) {
   console.log('wtf?');
 }
               </code></pre>
-     					<pre><code></code></pre>
+          		<pre><code></code></pre>
             </div>
-          </section> 
-
+          </section>
 
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Switch / Case</h2>
@@ -439,10 +481,82 @@ switch (fav.toLowerCase()) {
           </section>
 
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Foo</h2>
+            <h2>While / Do While</h2>
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
+var list = [1, 2, 3, 4, 5];
+var item;
+
+while (item = list.pop()) {
+  console.log(item);
+}
+
+console.sep(6);
+
+// this will run at least once
+do {
+  console.log('length:', list.length);
+} while (list.length);
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>For Loop</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var list = ["one", "two", "three", "four", "five"];
+
+// just like C
+for ( var idx = 0 ; idx < list.length ; idx++ ) {
+  console.log( list[idx] );
+}
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>For-In Loop</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var person = {
+  name: 'Ken',
+  title: 'Director of UX',
+  favoriteMovie: 'District 9'
+}
+
+for (key in person) {
+  console.log( key, ":", person[key] );
+}
+
+// note: no guaranteed ordering
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>Try / Catch / Finally</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var _originalLog = console.log;
+// ... temporarily redefine console.log
+
+var code = 'foo bar baz';
+
+try {
+  eval(code);
+} catch(e) {
+  $console.html('<span style="color:yellow;">' + e.toString() + '</span>');
+} finally {
+  console.log = _originalLog;
+}
               </code></pre>
     					<pre><code></code></pre>
             </div>
