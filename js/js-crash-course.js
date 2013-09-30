@@ -1,6 +1,7 @@
 $(function() {
 
   var _consoleLog = console.log;
+  console.sep = function() { console.log("\n--------------------\n"); }
 
   $(".inline-repl").on("keypress", function(e) {
     if (e.which === 18) {

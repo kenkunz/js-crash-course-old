@@ -224,7 +224,7 @@ console.log( 1, 1.23, 1.2e4, 1.2e-4, 0377, 0xFF );
 console.log( 0/1 , 1/0, -1/0, 0/0 );
 
 // they're all numbers
-console.log("\n----------\n");
+console.sep();
 console.log( typeof(1) );
 console.log( typeof(Infinity) );
 console.log( typeof(NaN) );
@@ -246,7 +246,7 @@ console.log( s[0] );
 console.log( s.charAt(1), s.charCodeAt(1) );
 console.log( s + "bar" );
 
-console.log("\n----------\n");
+console.sep();
 
 var s2 = s.replace("oo", "owl");
 console.log( s, s2 );
@@ -260,12 +260,15 @@ console.log( s, s2 );
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
-var t = true,
-    f = false;
+console.log( true, false );
+console.sep();
 
-true && false;
-true || false;
+console.log( true && false );
+console.log( true || false );
 console.log( !true );
+console.sep();
+
+console.log( 0 === 0 );
               </code></pre>
     					<pre><code></code></pre>
             </div>
@@ -276,13 +279,23 @@ console.log( !true );
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
-{
+var o = {
   foo: "abc",
-  bar: 1
+  bar: 1,
+  baz: { a: 'bingo', b: 'flamingo' }
 }
+
+console.log( o.foo );
+console.log( o['bar'] );
+console.log( o.baz.a );
+console.sep();
+
+var key = 'bar';
+console.log( o[key] );
               </code></pre>
     					<pre><code></code></pre>
             </div>
+            <p class="fragment">JSON = for JavaScript Object Notation</p>
           </section>
 
 
