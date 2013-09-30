@@ -19,8 +19,15 @@ $(function() {
       }
 
       $console.text("");
-      eval($code.text());
-      console.log = _consoleLog;
+      try {
+        eval($code.text());
+      } catch(e) {
+        $console.html('<span class="error">' + e.toString() + '</span>');
+        throw e;
+      } finally {
+        console.log = _consoleLog;
+      }
+
     }
   });
 
