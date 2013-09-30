@@ -20,7 +20,7 @@ $(function() {
 
       $console.text("");
       try {
-        eval($code.text());
+        eval(code);
       } catch(e) {
         $console.html('<span class="error">' + e.toString() + '</span>');
         throw e;

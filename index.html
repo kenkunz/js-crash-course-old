@@ -217,15 +217,17 @@ console.log('Hello, world!');
 
             <div class="inline-repl">
     					<pre><code data-trim contenteditable>
-// numbers: 1, 1.2, 1.2e4, 1.2e-4
-// 0377, 0xFF
-// 64 bit floating point: max integer is 2**53 or 9007199254740992
+// these are all number literals
+console.log( 1, 1.23, 1.2e4, 1.2e-4, 0377, 0xFF );
 
-console.log(  0 / 1 );
-console.log(  1 / 0 );
-console.log( -1 / 0 );
-console.log(  1 / 2 );
-console.log(  0 / 0 );
+// here are some other interesting numbers
+console.log( 0/1 , 1/0, -1/0, 0/0 );
+
+// they're all numbers
+console.log("\n----------\n");
+console.log( typeof(1) );
+console.log( typeof(Infinity) );
+console.log( typeof(NaN) );
               </code></pre>
     					<pre><code></code></pre>
             </div>
