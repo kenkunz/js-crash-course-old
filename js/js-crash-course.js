@@ -17,7 +17,15 @@ $(function() {
 
       console.log = function() {
         var args = Array.prototype.slice.call(arguments);
-        var argStr = args.map(function(arg){ return arg; String(arg); }).join(" ");
+        var argStr = args.map(function(arg){
+          if (arg === undefined) {
+            return 'undefined';
+          } else if (arg.constructor === Array) {
+            return JSON.stringify(arg);
+          } else {
+            return String(arg);
+          }
+        }).join(" ");
         $console.text($console.text() + argStr + "\n");
         _consoleLog.apply(this, arguments);
       }

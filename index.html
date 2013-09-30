@@ -357,6 +357,7 @@ console.log( randomInt(1000) );
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Control Structures</h1>
             <ul>
+              <li>variables / scoping</li>
               <li>conditionals</li>
               <li>switch / case</li>
               <li>while / do&hellip;while</li>
@@ -365,6 +366,30 @@ console.log( randomInt(1000) );
             </ul>
           </section>
 
+  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h2>Variables / Scoping</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+var foo = 'foo',
+    bar = [ 1, 2, 3 ],
+    baz;
+
+console.sep(5);
+console.log( foo, bar, baz );
+
+if (true) {
+  var foo;
+  console.log(foo);
+  foo = 1;
+}
+
+console.log(foo);
+
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
 
           <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Conditionals</h2>
@@ -411,17 +436,6 @@ switch (fav.toLowerCase()) {
 
             <p class="fragment">(often an anti-pattern)</p>
 
-          </section>
-
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <h2>Variables / Scoping</h2>
-
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
-
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
           </section>
 
   				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
