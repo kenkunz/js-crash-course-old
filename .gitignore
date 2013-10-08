@@ -5,3 +5,4 @@ tmp/**
 node_modules/
 .sass-cache
 reveal.html
+notes.md
