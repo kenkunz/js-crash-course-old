@@ -86,8 +86,8 @@
               <li class="fragment">Web Browser</li>
               <li class="fragment">Desktop (browser, command line)</li>
               <li class="fragment">Mobile Phone (browser!)</li>
-              <li class="fragment">Mobile Apps (web views)</li>
-              <li class="fragment">Node, other, other ...</li>
+              <li class="fragment">Mobile Apps (UIWebView)</li>
+              <li class="fragment">node.js, spidermonkey, Rhino, &hellip;</li>
             </ul>
             <p class="fragment highlight"><br>Are you convinced yet?</p>
           </section>
@@ -116,6 +116,12 @@
 
           <section>
             <h2>JavaScript has <span class="highlight">solid tooling</span></h2>
+            <ul>
+              <li class="fragment">Firebug</li>
+              <li class="fragment">Web inspectors/debuggers</li>
+              <li class="fragment">jslint</li>
+              <li class="fragment">Editor / IDE support</li>
+            </ul>
           </section>
 
           <section>
@@ -564,48 +570,107 @@ try {
 
         </section>
 
+        <section>
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>Prototypical Inheritance</h1>
+            <p class="fragment">
+              We're not in
+              <span style="text-decoration:line-through;">Kansas</span>
+              Classical Inheritance land anymore
+            </p>
+          </section>
+
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Functions are Constructors!</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+// _any_ function can be used as a constructor
+
+function foo() {
+  return 'foo';
+}
+
+// use the 'new' operator to construct an object
+var f = new foo();
+
+console.sep(8);
+console.log( f.constructor );
+
+console.sep(2);
+console.log( f.__proto__ === foo.prototype );
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+
+  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h2>Constructor Functions&hellip;</h2>
+
+            <div class="inline-repl">
+    					<pre><code data-trim contenteditable>
+function Shape(id) {
+  this.id = id;
+}
+Shape.prototype.shapeName = 'Generic Shape';
+Shape.prototype.inspect = function() {
+  return this.shapeName + " (" + this.id + ")";
+}
+
+var shape = new Shape(123);
+console.log( shape.inspect() );
+              </code></pre>
+    					<pre><code></code></pre>
+            </div>
+          </section>
+
+
+  				<section id="slide-inheritance" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+
+            <h2>Prototype Inheritance Chain</h2>
+
+            <div class="inline-repl" style="height: 540px;">
+    					<pre><code data-trim contenteditable style="height: 500px">
+function Shape(id) {
+  this.id = id;
+}
+Shape.prototype.shapeName = 'Generic Shape';
+Shape.prototype.inspect = function() {
+  return this.shapeName + " (" + this.id + ")";
+}
+
+function Rectangle(width, length) {
+  this.width = width;
+  this.length = length;
+  this.id = width + 'x' + length;
+}
+Rectangle.prototype = new Shape();
+Rectangle.prototype.shapeName = 'Rectangle';
+Rectangle.prototype.area = function() {
+  return this.width * this.length;
+}
+
+              </code></pre>
+    					<pre><code style="height: 500px"></code></pre>
+            </div>
+          </section>
+        </section>
+
+				<section id="slide-jquery">
+          <h1>DOM / jQuery</h1>
+          
+          <blockquote cite="http://jquery.com" style="display:none;">
+            jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event
+            handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of
+            versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+          </blockquote>
+        </section>
+
 				<section>
-					<h1>Array iterators (ECMAScript 5)</h1>
+					<h2>The end of web development&hellip;</h2>
 
-					<aside class="notes">
-					</aside>
-
-				</section>
-
-				<section>
-					<h1>Prototypical Inheritance</h1>
-
-					<aside class="notes">
-					</aside>
-
-				</section>
-
-				<section>
-					<h1>Functions = Closures</h1>
-
-					<aside class="notes">
-					</aside>
-
-				</section>
-
-				<section>
-					<h1>The DOM / jQuery</h1>
-
-					<aside class="notes">
-					</aside>
-
-				</section>
-
-				<section>
-					<h1>JS Unit Testing</h1>
-
-					<aside class="notes">
-					</aside>
-
-				</section>
-
-				<section>
-					<h1>JS Concurrency Model</h1>
+          <iframe src="http://www.slideshare.net/slideshow/embed_code/26675912?rel=0" width="427" height="356" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/TechnicalMachine/tessel-the-end-of-web-development-as-we-know-it" title="Tessel: The End of Web Development (as we know it)" target="_blank">Tessel: The End of Web Development (as we know it)</a> </strong> from <strong><a href="http://www.slideshare.net/TechnicalMachine" target="_blank">TechnicalMachine</a></strong> </div>
 
 					<aside class="notes">
 					</aside>
