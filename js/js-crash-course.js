@@ -10,9 +10,9 @@ $(function() {
       var $codeEls = $(this).find("pre code");
       var $code    = $codeEls.first();
       var $console = $codeEls.last();
+      var code     = $code.text();
 
       $code.blur();
-      var code = $code[0].innerText || $code[0].textContent;
       $code.html( hljs.highlight('javascript', code).value );
 
       console.log = function() {
@@ -40,6 +40,7 @@ $(function() {
         console.log = _consoleLog;
       }
 
+      $code.focus();
     }
   });
 
