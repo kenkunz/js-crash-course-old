@@ -62,3 +62,11 @@ div.attribution {
 .inline-repl .error {
   color: #ff5555;
 }
+
+#jquery-quote {
+  box-sizing: border-box;
+  padding: 1.5em;
+  font-style: normal;
+  font-size: 28px;
+  text-align: left;
+}
