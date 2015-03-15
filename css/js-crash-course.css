@@ -10,10 +10,29 @@
   color: #336699;
 }
 
+#slide-career h2:first-child {
+  margin-top: 2em;
+}
+
+
+#slide-golden h1:first-child {
+  margin-top: 2em;
+}
+
+
 .highlight {
   color: orange;
   font-weight: bold;
 }
+
+.reveal .slides section .fragment.highlight-orange {
+  opacity: 1;
+  visibility: visible;
+}
+.reveal .slides section .fragment.highlight-orange.visible {
+  color: orange;
+}
+
 
 p.attribution {
   font-size: 70%;
@@ -21,9 +40,8 @@ p.attribution {
 
 div.attribution {
   position: absolute;
-  bottom: -7em;
-  left: 0;
   font-size: 70%;
+  bottom: -7em;
 }
 
 #js-speed-charts {
@@ -39,31 +57,12 @@ div.attribution {
   height: 340px;
 }
 
-.inline-repl {
-  height: 380px;
-}
-
-.inline-repl pre {
-  float: left;
-}
-
-.inline-repl pre:first-child {
-  width: 62%;
-}
-.inline-repl pre:last-child {
-  width: 35%;
-  float: right;
-}
-
-.inline-repl pre code {
+pre.js-run code,
+pre.js-show code {
   height: 340px;
 }
 
-.inline-repl .error {
-  color: #ff5555;
-}
-
-#jquery-quote {
+#slide-jquery-quote {
   box-sizing: border-box;
   padding: 1.5em;
   font-style: normal;

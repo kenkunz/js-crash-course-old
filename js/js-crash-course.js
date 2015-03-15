@@ -1,47 +1,13 @@
 $(function() {
 
-  var _consoleLog = console.log;
-  console.sep = function(n) {
-    do { console.log(); n-=1; } while(n);
-  }
+  $("pre.js-run").each(function() {
+    var $el = $(this);
 
-  $(".inline-repl").on("keypress", function(e) {
-    if (e.which === 18) {
-      var $codeEls = $(this).find("pre code");
-      var $code    = $codeEls.first();
-      var $console = $codeEls.last();
-      var code     = $code.text();
-
-      $code.blur();
-      $code.html( hljs.highlight('javascript', code).value );
-
-      console.log = function() {
-        var args = Array.prototype.slice.call(arguments);
-        var argStr = args.map(function(arg){
-          if (arg === undefined) {
-            return 'undefined';
-          } else if (arg.constructor === Array) {
-            return JSON.stringify(arg);
-          } else {
-            return String(arg);
-          }
-        }).join(" ");
-        $console.text($console.text() + argStr + "\n");
-        _consoleLog.apply(this, arguments);
-      }
-
-      $console.text("");
-      try {
-        eval(code);
-      } catch(e) {
-        $console.html('<span class="error">' + e.toString() + '</span>');
-        throw e;
-      } finally {
-        console.log = _consoleLog;
-      }
-
-      $code.focus();
-    }
+    $('<a href="#">Run</a>').on("click", function(e) {
+        e.preventDefault();
+        console.clear && console.clear();
+        eval($el.text());
+      }).insertAfter($el);
   });
 
 });

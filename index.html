@@ -1,94 +1,97 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-		<title>JavaScript Crash Course</title>
+    <title>JavaScript Crash Course</title>
 
-		<meta name="description" content="A Crash Course in JavaScript">
-		<meta name="author" content="Ken Kunz">
+    <meta name="description" content="A Crash Course in JavaScript">
+    <meta name="author" content="Ken Kunz">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
-		<script>
-			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
-		</script>
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
 
     <!-- StyleSheet for this project -->
-		<link rel="stylesheet" href="css/js-crash-course.css">
-	</head>
+    <link rel="stylesheet" href="css/js-crash-course.css">
+  </head>
 
-	<body>
+  <body>
 
-		<div class="reveal">
+    <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section id="slide-title">
-					<h1>JavaScript</h1>
-					<h2 class="highlight">Crash Course</h2>
-					<p>
-						<small><a href="http://www.linkedin.com/pub/ken-kunz/5/b42/ab1">Ken Kunz</a> / <a href="http://twitter.com/kennethkunz">@kennethkunz</a></small>
-					</p>
-				</section>
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section id="slide-title">
+          <h1>JavaScript</h1>
+          <h2>Crash Course</h2>
+          <p>
+            <small><a href="http://www.linkedin.com/pub/ken-kunz/5/b42/ab1">Ken Kunz</a> / <a href="http://twitter.com/kennethkunz">@kennethkunz</a></small>
+          </p>
+        </section>
 
-				<section id="slide-instructions">
-					<h1>Instructions</h1>
+        <section id="slide-instructions">
+          <h1>Instructions</h1>
           <ul style="width:22em; font-size:32px;">
             <li>Advance through major sections using right-arrow</li>
             <li>Advance within a section using down-arrow</li>
             <li>Hit escape to see a slide overview</li>
-            <li>For code examples, hit Ctrl-R when the code box is focused to run</li>
+            <li>For code examples with <a href="javascript:void(0);">Run</a> option, open the browser console to see output.</li>
             <li>Edit the code right in the browser and re-run it!</li>
           </ul>
-				</section>
+        </section>
 
-				<section id="slide-career" data-background="img/rocketman.jpg">
-					<h2>How JavaScript</h2>
-					<h1>Launched</h1>
-					<h2>My Career</h2>
+        <section id="slide-career" data-background="img/rocketman.jpg">
+          <h2>How JavaScript</h2>
+          <h1>Launched</h1>
+          <h2>My Career</h2>
 
           <div class="attribution">Photo: <a href="http://www.flickr.com/photos/jurvetson/275890177/">Rocketman</a> by <a href="http://www.flickr.com/photos/jurvetson/">Steve Jurvetson</a></div>
 
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
-						open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
+          <aside class="notes">
+            Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
+            open the speaker notes window (hit 's' on your keyboard).
+          </aside>
+        </section>
 
         <!-- The Golden Age of JavaScript -->
         <section>
-  				<section id="slide-golden" data-background="img/golden_age.jpg">
-  					<h1>The Golden Age of JavaScript</h1>
+          <section id="slide-golden" data-background="img/golden_age.jpg">
+            <h1>The Golden Age of JavaScript</h1>
 
             <div class="attribution">
               Photo: <a href="http://www.deviantart.com/art/Golden-Age-276161526">Golden Age</a>
               by <a href="http://jcbarquet.deviantart.com/">Juan Carlos Barquet</a>
             </div>
 
-  					<aside class="notes">
+            <aside class="notes">
               We are in the Golden Age of JavaScript. When historians look back on crazy, amazing era of
               explosive innovation in web and mobile technologies and consider: "what was the single most
               important programming language in use at the time" – there will be little debate that it was
               JavaScript.
-  					</aside>
-
-  				</section>
+            </aside>
+          </section>
 
           <section>
             <h2>JavaScript is <span class="highlight">Everywhere</span></h2>
@@ -99,6 +102,7 @@
               <li class="fragment">Mobile Apps (UIWebView)</li>
               <li class="fragment">node.js, spidermonkey, Rhino, &hellip;</li>
               <li class="fragment">Hardware (<a target="_blank" href="https://tessel.io">tessel.io</a>)</li>
+              <li class="fragment">Minecraft (<a target="_blank" href="http://www.learntomod.com/">LearnToMod</a>, <a target="_blank" href="http://scriptcraftjs.org/">ScriptCraft</a>)</li>
             </ul>
             <p class="fragment highlight"><br>Are you convinced yet?</p>
           </section>
@@ -137,7 +141,7 @@
 
           <section>
             <h2>JavaScript has a</h2>
-            <h2><span class="highlight">mature</span></h2>
+            <h1><span class="highlight">mature</span></h1>
             <h2>lib/framework ecosystem</h2>
           </section>
 
@@ -145,17 +149,8 @@
 
         <!-- This is surprising! -->
         <section>
-
-  				<section>
-  					<h1>This is rather<br>unexpected!</h1>
-
-  					<aside class="notes">
-  					</aside>
-
-  				</section>
-
+          <h1>This is rather<br>unexpected!</h1>
         </section>
-
 
         <!-- Javascript Language attributes -->
         <section>
@@ -163,8 +158,8 @@
             <h1>Some Boring Stuff</h1>
           </section>
 
-  				<section>
-  					<h2>JavaScript Language</h2>
+          <section>
+            <h2>JavaScript Language</h2>
             <ul>
               <li class="fragment">Interpreted</li>
               <li class="fragment">C-style syntax</li>
@@ -175,13 +170,13 @@
               <li class="fragment">Single-Threaded</li>
             </ul>
 
-  					<aside class="notes">
-  					</aside>
+            <aside class="notes">
+            </aside>
 
-  				</section>
+          </section>
 
-  				<section>
-  					<h2>Multi-Paradigm</h2>
+          <section>
+            <h2>Multi-Paradigm</h2>
 
             <p>
               Supports <span class="highlight">object-oriented</span>,
@@ -189,35 +184,31 @@
               and <span class="highlight">functional</span> programming styles.
             </p>
 
-  					<aside class="notes">
-  					</aside>
+            <aside class="notes">
+            </aside>
 
-  				</section>
+          </section>
         </section>
-
 
         <!-- Basic Syntax -->
         <section>
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>JavaScript Basics</h1>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Hello World</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
-console.log('Hello, world!');
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            <pre class="js-run"><code data-trim contenteditable>
+              console.log('Hello, world!');
+            </code></pre>
           </section>
-
         </section>
+
 
         <!-- Types -->
         <section>
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h1>Types</h1>
             <ul>
               <li>Numbers</li>
@@ -230,148 +221,115 @@ console.log('Hello, world!');
             </ul>
           </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Numbers</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 // these are all number literals
-console.sep(2);
 console.log( 1, 1.23, 1.2e4, 1.2e-4, 0377, 0xFF );
 
 // here are some other interesting numbers
-console.sep(3);
 console.log( 0/1 , 1/0, -1/0, 0/0 );
 
 // they're all numbers
-console.sep(3);
 console.log(typeof 1, typeof Infinity, typeof NaN);
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Strings</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var s = "foo";
 
-console.sep(3);
 console.log( s.length );
 console.log( s.toUpperCase() );
 console.log( s[1], s.charAt(1), s.charCodeAt(1) );
 console.log( s + "bar" );
 
-console.sep(2);
 var s2 = s.replace("oo", "owl");
 console.log( s, s2 );
 
-console.sep(3);
 console.log( typeof s );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Booleans</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 console.log( true, false );
 
-console.sep(2);
 console.log( true && false );
 console.log( true || false );
 console.log( !true );
 console.log( 0 === 0, 0 !== 0 );
 
-console.sep(2);
 console.log( typeof true, typeof false );
 
 // note: all of these evaluate to false:
 false, 0, "", null, undefined;
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Objects</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var o = {
   foo: "abc",
   bar: 1,
-  baz: { a: 'bingo', b: 'flamingo' }
+  baz: { a: "bingo", b: "flamingo" }
 }
 
-console.sep(7)
 console.log( o.foo );
-console.log( o['bar'] );
+console.log( o["bar"] );
 console.log( o.baz.a );
 
-console.sep(3);
-var key = 'bar';
+var key = "bar";
 console.log( o[key] );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
             <p class="fragment">JSON = JavaScript Object Notation</p>
           </section>
 
-
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Arrays</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var a = [1, 2, 3, "foo"];
 var b = Array(100);
 
-console.sep(4)
 console.log( a.length, b.length );
 
 a[20] = "twenty";
 
-console.sep(4)
 console.log( a.length, a[20], a[19] );
 console.log( Object.keys(a) );
 
-console.sep(2);
 console.log( typeof a );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Functions</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 function randomInt(max) {
   var random = Math.random() * max;
   var randomInt = Math.round(random);
   return randomInt;
 }
 
-console.sep(7);
 console.log( randomInt(100) );
 console.log( randomInt(1000) );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
         </section>
 
-        <!-- Types -->
+        <!-- Control Structures -->
         <section>
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Control Structures</h1>
             <ul>
               <li>variables / scoping</li>
@@ -383,34 +341,28 @@ console.log( randomInt(1000) );
             </ul>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Variables / Scoping (p1)</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var foo = 'foo',
     bar = [ 1, 2, 3 ],
     baz;
 
-console.sep(5);
 console.log( foo, bar, baz );
 
 if (true) {
   var foo = 1;
 }
 
-console.sep(6);
 // console.log(foo);
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Variables / Scoping (p2)</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var foo = 'foo';
 
 function bar() {
@@ -418,19 +370,15 @@ function bar() {
   return foo;
 }
 
-console.sep(8);
 console.log( bar() );
 console.log( foo );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Variables / Scoping (p3)</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var foo, bar;
 
 function foobar() {
@@ -440,22 +388,17 @@ function foobar() {
 
 foobar();
 
-console.sep(10);
 console.log( foo, bar );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
           <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Always declare your variables with var!!!</h1>
-
           </section>
 
           <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Conditionals</h2>
-              <div class="inline-repl">
-                <pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var a = 0.1,
     b = 0.2,
     c = 0.3;
@@ -467,16 +410,12 @@ if (a + b === c) {
 } else {
   console.log('wtf?');
 }
-              </code></pre>
-          		<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Switch / Case</h2>
-
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var fav = prompt("What's your favorite color?");
 
 switch (fav.toLowerCase()) {
@@ -489,19 +428,14 @@ switch (fav.toLowerCase()) {
   default:
     console.log("how nice");
 }
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
-
+            </code></pre>
             <p class="fragment">(often an anti-pattern)</p>
-
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>While / Do While</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var list = [1, 2, 3, 4, 5];
 var item;
 
@@ -509,38 +443,30 @@ while (item = list.pop()) {
   console.log(item);
 }
 
-console.sep(6);
-
 // this will run at least once
 do {
   console.log('length:', list.length);
 } while (list.length);
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>For Loop</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var list = ["one", "two", "three", "four", "five"];
 
 // just like C
 for ( var idx = 0 ; idx < list.length ; idx++ ) {
   console.log( list[idx] );
 }
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>For-In Loop</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var person = {
   name: 'Ken',
   title: 'Director of Product Development',
@@ -552,16 +478,13 @@ for (key in person) {
 }
 
 // note: no guaranteed ordering
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-  				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h2>Try / Catch / Finally</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var _originalLog = console.log;
 // ... temporarily redefine console.log
 
@@ -574,15 +497,14 @@ try {
 } finally {
   console.log = _originalLog;
 }
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
         </section>
 
+        <!-- Inheritance -->
         <section>
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h1>Prototypical Inheritance</h1>
             <p class="fragment">
               We're not in
@@ -591,11 +513,10 @@ try {
             </p>
           </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Functions are Constructors!</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 // _any_ function can be used as a constructor
 
 function foo() {
@@ -605,22 +526,16 @@ function foo() {
 // use the 'new' operator to construct an object
 var f = new foo();
 
-console.sep(8);
 console.log( f.constructor );
 
-console.sep(2);
 console.log( f.__proto__ === foo.prototype );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
             <h2>Constructor Functions&hellip;</h2>
 
-            <div class="inline-repl">
-    					<pre><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 function Shape(id) {
   this.id = id;
 }
@@ -631,18 +546,14 @@ Shape.prototype.inspect = function() {
 
 var shape = new Shape(123);
 console.log( shape.inspect() );
-              </code></pre>
-    					<pre><code></code></pre>
-            </div>
+            </code></pre>
           </section>
 
-
-  				<section id="slide-inheritance" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section id="slide-inheritance" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
 
             <h2>Prototype Inheritance Chain</h2>
 
-            <div class="inline-repl" style="height: 540px;">
-    					<pre><code data-trim contenteditable style="height: 500px">
+            <pre class="js-run"><code data-trim contenteditable style="height: 500px; max-height: 500px;">
 function Shape(id) {
   this.id = id;
 }
@@ -661,62 +572,221 @@ Rectangle.prototype.shapeName = 'Rectangle';
 Rectangle.prototype.area = function() {
   return this.width * this.length;
 }
-
-              </code></pre>
-    					<pre><code style="height: 500px"></code></pre>
-            </div>
+            </code></pre>
           </section>
+
         </section>
 
-				<section>
+        <!-- ES6 -->
+        <section>
+          <section id="slide-es6" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>EcmaScript 6</h1>
+            <ul>
+              <li class="fragment">aka, Harmony or ES.next</li>
+              <li class="fragment">targeting ratification in June 2015</li>
+              <li class="fragment">but you can start using it today!</li>
+            </ul>
+          </section>
 
-					<section id="slide-client-side" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-	          <h1>Client-Side JavaScript</h1>
-						<p class="fragment">How the IE6 DOM almost killed my soul</p>
-	        </section>
+          <section id="slide-babel" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <img src="img/babel.png" style="border:none;">
+          </section>
 
-					<section id="slide-jquery" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-	          <h1>jQuery</h1>
+          <section id="slide-es6-block-scope" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>Block Scope</h1>
+            <pre class="js-show"><code data-trim contenteditable style="maxheight: 450px; height: 450px;">
+let foo = 'foo';
 
-	          <blockquote id="jquery-quote" cite="http://jquery.com">
-							jQuery is a fast, small, and feature-rich JavaScript library. It makes
-							things like HTML document traversal and manipulation, event handling,
-							animation, and Ajax much simpler with an easy-to-use API that works across
-							a multitude of browsers.
-						</blockquote>
-	        </section>
+if (true) {
+  let foo = "bar";
+  console.log(foo);
+}
 
-					<section id="slide-front-end" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-	          <h1>Front-end frameworks</h1>
-						<ul>
-							<li>Angular.js (Google)</li>
-							<li>Ember.js</li>
-							<li>Backbone.js</li>
-							<li>React.js (Facebook)</li>
-						</ul>
-	        </section>
+for (let foo=1; foo<2; foo++) { console.log(foo); }
 
-				</section>
+console.log(foo);
+
+// output:
+"bar"
+1
+"foo"
+            </code></pre>
+          </section>
+
+
+          <section id="slide-es6-arrows-1" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>(Fat) Arrows</h1>
+            <pre class="js-show"><code data-trim contenteditable>
+var a = [
+  "Hydrogen",
+  "Helium",
+  "Lithium",
+  "Beryl­lium"
+];
+
+// old way
+a.map(function(s){ return s.length });
+
+// new way
+a.map( s => s.length );
+            </code></pre>
+          </section>
+
+          <section id="slide-es6-arrows-2" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>Lexical This</h1>
+            <pre class="js-show"><code data-trim contenteditable>
+function Foo() {
+  this.val = 10;
+
+  setTimeout(function() { console.log(this.val); }, 100);
+
+  setTimeout(() => console.log(this.val), 200);
+}
+
+new Foo();
+
+// output:
+undefined
+10
+            </code></pre>
+          </section>
+
+          <section id="slide-es6-classes" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>Classes</h1>
+            <pre class="js-show"><code data-trim contenteditable style="max-height: 400px; height: 400px;">
+class Person {
+  constructor(firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  get name() {
+    return this.firstName + " " + this.lastName;
+  }
+
+  set name(name) {
+    var names = name.split(" ");
+    this.firstName = names[0];
+    this.lastName = names[1];
+  }
+}
+            </code></pre>
+          </section>
+
+          <section id="slide-es6-other" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>Other Features</h1>
+            <pre class="js-show"><code data-trim contenteditable>
+// default arguments
+var hello = function(name = "guest") {
+  alert(name);
+}
+
+// destructuring assignment
+[ first, , last ] = [ 1, 2, 3, 4, 5 ];
+            </code></pre>
+          </section>
+
+          <section id="slide-es6-more" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
+            <h1>And More!</h1>
+            <ul>
+              <li>Modules</li>
+              <li>Promises</li>
+              <li>Iterators</li>
+              <li>Generators</li>
+              <li>Unicode</li>
+              <li>Tail Recursion</li>
+            </ul>
+          </section>
+
+        </section>
 
 
         <section>
+          <section id="slide-client-side" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>Client-Side JavaScript</h1>
+            <p class="fragment">How the IE6 DOM almost killed my soul</p>
+          </section>
 
-  				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+          <section id="slide-jquery" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>jQuery</h1>
+
+            <blockquote id="slide-jquery-quote" cite="http://jquery.com">
+              jQuery is a fast, small, and feature-rich JavaScript library. It makes
+              things like HTML document traversal and manipulation, event handling,
+              animation, and Ajax much simpler with an easy-to-use API that works across
+              a multitude of browsers.
+            </blockquote>
+          </section>
+
+					<section id="slide-jquery-dollar" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1 style="text-transform:none;"><span class="highlight">$</span>("#awesome")</h1>
+          </section>
+
+          <section id="slide-jquery-traversal" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>jQuery</h1>
+            <h2>DOM Traversal and Manipulation</h2>
+            <pre><code data-trim>
+              $( "button.continue" ).html( "Next Step..." )
+            </code></pre>
+          </section>
+
+          <section id="slide-jquery-traversal" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>jQuery</h1>
+            <h2>Event Handling</h2>
+            <pre><code data-trim>
+var hiddenBox = $( "#banner-message" );
+$( "#button-container button" ).on( "click", function( event ) {
+  hiddenBox.show();
+});
+            </code></pre>
+          </section>
+
+          <section id="slide-jquery-ajax" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>jQuery</h1>
+            <h2>Ajax</h2>
+            <pre><code data-trim>
+$.ajax({
+  url: "/api/getWeather",
+  data: {
+    zipcode: 97201
+  },
+  success: function( data ) {
+    $( "#weather-temp" ).html( "<strong>" + data + "</strong> degrees" );
+  }
+});
+            </code></pre>
+          </section>
+
+          <section id="slide-front-end" data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
+            <h1>Front-end frameworks</h1>
+            <ul>
+              <li>Angular.js (Google)</li>
+              <li>Ember.js</li>
+              <li>Backbone.js</li>
+              <li class="fragment highlight-orange">React.js / Flux</li>
+            </ul>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Server-Side JavaScript</h1>
             <p class="fragment">
             </p>
           </section>
 
-				</section>
+        </section>
 
-				<section>
+        <section>
 
           <section>
-  					<h1>Resources</h1>
+            <h1>Resources</h1>
           </section>
 
           <section>
-  					<h2>Books</h2>
+            <h2>Books</h2>
             <ul>
               <li><a target="_blank" href="http://www.amazon.com/Effective-JavaScript-Specific-Development-ebook/dp/B00AC1RP14">Effective JavaScript</a></li>
               <li><a target="_blank" href="http://www.amazon.com/JavaScript-Definitive-Guide-Guides-ebook/dp/B004XQX4K0">JavaScript: The Definitive Guide</a><br>(aka, &ldquo;The Rhino Book&rdquo;)</li>
@@ -727,42 +797,48 @@ Rectangle.prototype.area = function() {
             </ul>
           </section>
 
-				</section>
+<!--
+Videos:
+https://github.com/bolshchikov/js-must-watch
+-->
 
-			</div>
 
-		</div>
+        </section>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.min.js"></script>
-		<script src="lib/js/jquery-2.0.3.min.js"></script>
-		<script src="js/js-crash-course.js"></script>
+      </div>
 
-		<script>
+    </div>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="lib/js/jquery-2.1.3.js"></script>
+    <script src="js/js-crash-course.js"></script>
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+    <script>
 
-		</script>
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-	</body>
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
 </html>
