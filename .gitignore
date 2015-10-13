@@ -6,3 +6,5 @@ node_modules/
 .sass-cache
 reveal.html
 notes.md
+css/reveal.min.css
+js/reveal.min.js
