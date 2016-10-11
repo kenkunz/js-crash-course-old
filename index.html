@@ -606,7 +606,7 @@ Rectangle.prototype.area = function() {
 
           <section id="slide-es6-block-scope" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Block Scope</h1>
-            <pre class="js-show"><code data-trim contenteditable style="maxheight: 450px; height: 450px;">
+            <pre class="js-run"><code data-trim contenteditable style="maxheight: 450px; height: 450px;">
 let foo = 'foo';
 
 if (true) {
@@ -617,11 +617,6 @@ if (true) {
 for (let foo=1; foo<2; foo++) { console.log(foo); }
 
 console.log(foo);
-
-// output:
-"bar"
-1
-"foo"
             </code></pre>
           </section>
 
@@ -638,7 +633,7 @@ console.log(foo);
 
           <section id="slide-es6-arrows-1" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>(Fat) Arrows</h1>
-            <pre class="js-show"><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 var a = [
   "Hydrogen",
   "Helium",
@@ -656,7 +651,7 @@ a.map( s => s.length );
 
           <section id="slide-es6-arrows-2" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Lexical This</h1>
-            <pre class="js-show"><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 function Foo() {
   this.val = 10;
 
@@ -666,16 +661,12 @@ function Foo() {
 }
 
 new Foo();
-
-// output:
-undefined
-10
             </code></pre>
           </section>
 
           <section id="slide-es6-classes" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Classes</h1>
-            <pre class="js-show"><code data-trim contenteditable style="max-height: 400px; height: 400px;">
+            <pre class="js-run"><code data-trim contenteditable style="max-height: 400px; height: 400px;">
 class Person {
   constructor(firstName, lastName) {
     this.firstName = firstName;
@@ -697,10 +688,10 @@ class Person {
 
           <section id="slide-es6-other" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>Other Features</h1>
-            <pre class="js-show"><code data-trim contenteditable>
+            <pre class="js-run"><code data-trim contenteditable>
 // default arguments
 var hello = function(name = "guest") {
-  alert(name);
+  console.log(name);
 }
 
 // destructuring assignment
