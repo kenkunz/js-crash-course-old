@@ -6,7 +6,8 @@ $(function() {
     $('<a href="#">Run</a>').on("click", function(e) {
         e.preventDefault();
         console.clear && console.clear();
-        eval($el.text());
+        var code = $el[0].innerText || $el.text();
+        eval(code);
       }).insertAfter($el);
   });
 
