@@ -488,15 +488,16 @@ for (key in person) {
             <h2>Try / Catch / Finally</h2>
 
             <pre class="js-run"><code data-trim contenteditable>
-var _originalLog = console.log;
 // ... temporarily redefine console.log
+var _originalLog = console.log;
+console.log = function(val) { _originalLog("EVAL LOG: " + val); }
 
 var code = 'foo bar baz';
 
 try {
   eval(code);
 } catch(e) {
-  $console.html('<span style="color:yellow;">' + e.toString() + '</span>');
+  console.error('EVAL ERROR: ' + e.toString());
 } finally {
   console.log = _originalLog;
 }
@@ -707,7 +708,7 @@ var hello = function(name = "guest") {
               <li>Iterators</li>
               <li>Generators</li>
               <li>Unicode</li>
-              <li>Tail Recursion</li>
+              <li>Tail Call Optimization</li>
             </ul>
           </section>
 
