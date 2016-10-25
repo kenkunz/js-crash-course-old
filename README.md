@@ -1,6 +1,6 @@
 # JavaScript Crash Course
 
-This is a [Reveal.js](http://lab.hakim.se/reveal-js/)-based presentation that was given at IIT in October, 2015.
+This is a [Reveal.js](http://lab.hakim.se/reveal-js/)-based presentation that was given at IIT in October, 2015 (and again in 2016).
 
 [View the presentation](http://kenkunz.github.io/js-crash-course/)
 
