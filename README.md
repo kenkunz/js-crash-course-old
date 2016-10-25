@@ -4,6 +4,8 @@ This is a [Reveal.js](http://lab.hakim.se/reveal-js/)-based presentation that wa
 
 [View the presentation](http://kenkunz.github.io/js-crash-course/)
 
+Check out the [unit testing examples](https://github.com/kenkunz/js-examples).
+
 ## License
 
 Code licensed under [The MIT License (MIT)](http://opensource.org/licenses/MIT)
