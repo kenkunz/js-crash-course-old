@@ -57,6 +57,13 @@ div.attribution {
   height: 340px;
 }
 
+#slide-es6-compat a {
+  display: block;
+}
+#slide-es6-compat a.fragment {
+  margin-top: -482px;
+}
+
 pre.js-run code,
 pre.js-show code {
   height: 340px;
