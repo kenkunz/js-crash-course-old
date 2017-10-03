@@ -638,7 +638,7 @@ console.log(foo);
           <section id="slide-es6-arrows-1" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
             <h1>(Fat) Arrows</h1>
             <pre class="js-run"><code data-trim contenteditable>
-var a = [
+let a = [
   "Hydrogen",
   "Helium",
   "Lithium",
@@ -694,12 +694,15 @@ class Person {
             <h1>Other Features</h1>
             <pre class="js-run"><code data-trim contenteditable>
 // default arguments
-var hello = function(name = "guest") {
+function hello(name = "guest") {
   console.log(name);
 }
+hello();
+hello("Ken");
 
 // destructuring assignment
 [ first, , last ] = [ 1, 2, 3, 4, 5 ];
+console.log(first, last);
             </code></pre>
           </section>
 
