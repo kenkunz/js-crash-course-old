@@ -47,7 +47,7 @@
           <h1>JavaScript</h1>
           <h2>Crash Course</h2>
           <p>
-            <small><a href="http://www.linkedin.com/pub/ken-kunz/5/b42/ab1">Ken Kunz</a> / <a href="http://twitter.com/kennethkunz">@kennethkunz</a></small>
+            <small><a target="_blank" href="http://www.linkedin.com/pub/ken-kunz/5/b42/ab1">Ken Kunz</a> / <a target="_blank" href="http://twitter.com/kennethkunz">@kennethkunz</a></small>
           </p>
         </section>
 
@@ -67,7 +67,7 @@
           <h1>Launched</h1>
           <h2>My Career</h2>
 
-          <div class="attribution">Photo: <a href="http://www.flickr.com/photos/jurvetson/275890177/">Rocketman</a> by <a href="http://www.flickr.com/photos/jurvetson/">Steve Jurvetson</a></div>
+          <div class="attribution">Photo: <a target="_blank" href="http://www.flickr.com/photos/jurvetson/275890177/">Rocketman</a> by <a target="_blank" href="http://www.flickr.com/photos/jurvetson/">Steve Jurvetson</a></div>
 
           <aside class="notes">
             Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you
@@ -81,8 +81,8 @@
             <h1>The Golden Age of JavaScript</h1>
 
             <div class="attribution">
-              Photo: <a href="http://www.deviantart.com/art/Golden-Age-276161526">Golden Age</a>
-              by <a href="http://jcbarquet.deviantart.com/">Juan Carlos Barquet</a>
+              Photo: <a target="_blank" href="http://www.deviantart.com/art/Golden-Age-276161526">Golden Age</a>
+              by <a target="_blank" href="http://jcbarquet.deviantart.com/">Juan Carlos Barquet</a>
             </div>
 
             <aside class="notes">
@@ -102,7 +102,7 @@
               <li class="fragment">Mobile Apps (UIWebView)</li>
               <li class="fragment">node.js, spidermonkey, Rhino, &hellip;</li>
               <li class="fragment">Hardware (<a target="_blank" href="https://tessel.io">tessel.io</a>, <a target="_blank" href="https://www.espruino.com/">Espruino</a>)</li>
-              <li class="fragment">Minecraft (<a target="_blank" href="http://www.learntomod.com/">LearnToMod</a>, <a target="_blank" href="http://scriptcraftjs.org/">ScriptCraft</a>)</li>
+              <li class="fragment">Minecraft (<a target="_blank" href="http://www.learntomod.com/">LearnToMod</a>, <a target="_blank" href="https://github.com/walterhiggins/ScriptCraft">ScriptCraft</a>)</li>
             </ul>
             <p class="fragment highlight"><br>Are you convinced yet?</p>
           </section>
@@ -116,7 +116,7 @@
 
             <p class="fragment attribution">
               Source:
-              <a href="http://flux242.blogspot.com/2013/09/javascript-vs-perl-vs-python-vs-lua.html">
+              <a target="_blank" href="http://flux242.blogspot.com/2013/09/javascript-vs-perl-vs-python-vs-lua.html">
                 Alex's blog &rsaquo;
                 Javascript vs Perl vs Python vs Lua speed comparison
               </a>
@@ -124,18 +124,29 @@
           </section>
 
           <section>
-            <h2>JavaScript is the</h2>
+            <h2>JavaScript
+              <span style="color:darkred;text-decoration:line-through;">is</span>
+              was the
+            </h2>
             <h2><span class="highlight">Assembly Language</span> of the Web</h2>
-            <iframe data class="fragment" width="640" height="390" src="http://www.youtube.com/embed/XsyogXtyU9o" frameborder="0" allowfullscreen=""></iframe>
+            <a target="_blank" href="https://www.youtube.com/watch?v=XsyogXtyU9o">
+              <img class="fragment" src="img/youtube-XsyogXtyU9o.png" style="border:none;width:640px;height:390px;">
+            </a>
+            <p class="fragment">(superceded by <a target="_blank" href="https://webassembly.org/"><i>Wasm</i></a>)</p>
           </section>
 
           <section>
             <h2>JavaScript has <span class="highlight">solid tooling</span></h2>
             <ul>
               <li class="fragment">Firebug</li>
-              <li class="fragment">Web inspectors/debuggers</li>
-              <li class="fragment">jslint / jshint</li>
-              <li class="fragment">Editor / IDE support</li>
+              <li class="fragment">Web inspectors / <a target="_blank" href="https://nodejs.org/en/docs/guides/debugging-getting-started/">debuggers</a></li>
+              <li class="fragment"><a target="_blank" href="https://eslint.org/">ESLint</a></li>
+              <li class="fragment">
+                Editors / IDEs
+                (<a target="_blank" href="https://atom.io/">Atom</a>,
+                 <a target="_blank" href="https://code.visualstudio.com/">VS Code</a>,
+                 <a target="_blank" href="https://microsoft.github.io/language-server-protocol/">LSP</a>)
+              </li>
             </ul>
           </section>
 
@@ -472,8 +483,8 @@ for ( var idx = 0 ; idx < list.length ; idx++ ) {
             <pre class="js-run"><code data-trim contenteditable>
 var person = {
   name: 'Ken',
-  title: 'VP of Technology',
-  favoriteMovie: 'Blade Runner 2049'
+  title: 'VP of Platform Ecosystem',
+  favoriteMovie: '2001: A Space Odyssey'
 }
 
 for (key in person) {
@@ -497,7 +508,7 @@ var code = 'foo bar baz';
 try {
   eval(code);
 } catch(e) {
-  console.error('EVAL ERROR: ' + e.toString());
+  console.error('EVAL ERROR: ' + e);
 } finally {
   console.log = _originalLog;
 }
@@ -603,7 +614,7 @@ Rectangle.prototype.area = function() {
           </section>
 
           <section id="slide-babel" data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-            <a href="https://babeljs.io/" target="_blank">
+            <a target="_blank" href="https://babeljs.io/" target="_blank">
               <img src="img/babel.png" style="border:none;">
             </a>
           </section>
