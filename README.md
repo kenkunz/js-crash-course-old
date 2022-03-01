@@ -1,8 +1,11 @@
 # JavaScript Crash Course
 
-This is a [Reveal.js](http://lab.hakim.se/reveal-js/)-based presentation that was given at IIT in October, 2015 (and again in 2016 &hellip; and 2017).
+**NOTE:** This repo is being archived and replaced by
+[kenkunz/js-crash-course](https://github.com/kenkunz/js-crash-course).
 
-[View the presentation](http://kenkunz.github.io/js-crash-course/)
+This is a [Reveal.js](http://lab.hakim.se/reveal-js/)-based presentation that was given at IIT in October, 2015 (and again in 2016, 2017 and 2020).
+
+[View the presentation](http://kenkunz.github.io/js-crash-course-old/)
 
 Check out the [unit testing examples](https://github.com/kenkunz/js-examples).
 
